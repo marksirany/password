@@ -32,13 +32,12 @@
       <input type="text" id="tb" name="tb" />
       <input type="button" value="Generate Password" onclick="Random();" />
     </form>
+
+   
     
-    <textarea>
-      readonly
-      id="password"
-      placeholder="Your Secure Password"
-      aria-label="Generated Password"
-    </textarea>
+    <button id="copy">
+      Copy to Clipboard
+    </button>
 
    
     
@@ -48,6 +47,8 @@
         var rnd = Math.floor(Math.random() * 1000000000);
         document.getElementById("tb").value = rnd;
       }
+
+    
     </script>
   </body>
 </html>
