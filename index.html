@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <header>
-      <h1>Password Generator</h1>
-    </header>
-    <h2>Generate a Password</h2>
 
-    <div>
-      <input id="special" type="checkbox" /> use special characters ( !@#$%^&* )
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="card">
+    <div class="card-body">
+      <header>
+        <h1 class="text-center">Password Generator</h1>
+      
+      </header>
+      
     </div>
-
-    <div><input id="numeric" type="checkbox" /> use numeric characters</div>
-
-    <div><input id="lowercase" type="checkbox" /> use lowercase characters</div>
-
-    <div><input id="uppercase" type="checkbox" /> use uppercase characters</div>
-
+  </div>
+<div class="card">
+  <div class="card-header">
+    <h2>Generate a Password</h2>
+  </div>
+  <div class="card-body">
+      <div>
+        <input id="special" type="checkbox" /> use special characters ( !@#$%^&* )
+      </div>
+      
+      <div><input id="numeric" type="checkbox" /> use numeric characters</div>
+      
+      <div><input id="lowercase" type="checkbox" /> use lowercase characters</div>
+      
+      <div><input id="uppercase" type="checkbox" /> use uppercase characters</div>
     <form name="rn">
       <input type="text" id="tb" name="tb" />
       <input type="button" value="Generate Password" onclick="Random();" />
     </form>
-
-   
-    
     <button id="copy">
       Copy to Clipboard
     </button>
 
-   
-    
+  </div>
+</div>
+  
+<!--start javascript-->
 
-    <script>
-      function Random() {
-        var rnd = Math.floor(Math.random() * 1000000000);
-        document.getElementById("tb").value = rnd;
-      }
 
-    
-    </script>
-  </body>
+
+  <script>
+    function Random() {
+      const rnd = Math.floor(Math.random() * 1000000000);
+      document.getElementById("tb").value = rnd;
+      console.log(Random);
+    }
+
+
+  </script>
+</body>
+
 </html>
