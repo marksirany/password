@@ -11,6 +11,7 @@
 </head>
 
 <body>
+ 
   <div class="card">
     <div class="card-body">
       <header>
@@ -20,29 +21,32 @@
 
     </div>
   </div>
-  <div class="card">
-    <div class="card-header">
-      <h2>Generate a Password</h2>
-    </div>
-    <div class="card-body">
-      <div>
-        <input id="special" type="checkbox" /> use special characters ( !@#$%^&* )
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <!-- <div>
+            <input id="special" type="checkbox" /> use special characters ( !@#$%^&* )
+          </div>
+
+          <div><input id="numeric" type="checkbox" /> use numeric characters</div>
+
+          <div><input id="lowercase" type="checkbox" /> use lowercase characters</div>
+
+          <div><input id="uppercase" type="checkbox" /> use uppercase characters</div> -->
+          <form name="rn">
+            <input type="text" id="tb" name="tb" />
+            <input type="button" value="Generate Password" onclick="Random();" />
+          </form>
+          <button id="copy">
+            Copy to Clipboard
+          </button>
+
+        </div>
       </div>
-
-      <div><input id="numeric" type="checkbox" /> use numeric characters</div>
-
-      <div><input id="lowercase" type="checkbox" /> use lowercase characters</div>
-
-      <div><input id="uppercase" type="checkbox" /> use uppercase characters</div>
-      <form name="rn">
-        <input type="text" id="tb" name="tb" />
-        <input type="button" value="Generate Password" onclick="Random();" />
-      </form>
-      <button id="copy">
-        Copy to Clipboard
-      </button>
-
-    </div>
   </div>
 
   <!--start javascript-->
